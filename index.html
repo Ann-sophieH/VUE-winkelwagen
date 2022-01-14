@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue inleiding</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div id="app" class="row">
+    <product-weergave :member="gold" @toevoegen-winkelwagen="updateWinkelwagen"></product-weergave>
+        <div class="col-12">
+            Winkelwagen({{winkelwagen.length}})
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.2.23/dist/vue.global.js"></script>
+<script src="js/main.js"></script>
+<script src="./componenten/productWeergave.js"></script>
+<script src="./componenten/reviewform.js"></script>
+
+<script>
+    const mountedApp = app.mount('#app') //moet altijd onderaan staan main.script erboven w uitgelezen, componenten komen daartussen
+    //./ voor deze directory ../ voor andere directory
+</script>
+</body>
+</html>
